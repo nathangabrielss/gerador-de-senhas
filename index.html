@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, password generator">
+    <title>Gerador de Senhas Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <main class="box">
+        <div class="header">
+            <i class="ph-fill ph-lock-key text-gradient"></i>
+            <h1>Password<br>Generator</h1>
+        </div>
+
+        <div class="content">
+            <div class="slider-info">
+                <label>Tamanho da senha:</label>
+                <span id="valor">16</span>
+            </div>
+
+            <input id="slider" class="slider" type="range" min="8" max="25" value="16">
+
+            <button id="button" class="button-cta" onclick="generatePassword()">
+                Gerar Senha
+            </button>
+        </div>
+
+        <div id="container-password" class="container-password hide" onclick="copyPassword()">
+            <span class="label-copy">Clique para copiar</span>
+            <div class="password-display">
+                <span id="password"></span>
+                <i class="ph ph-copy"></i>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por <strong class="my-name">Nathan Gabriel</strong></p>
+        <p class="project-context">Projeto Acadêmico • Análise e Des. de Sistemas (UNINTER)</p>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nathangbrl" target="_blank" title="LinkedIn">
+                <i class="ph ph-linkedin-logo"></i>
+            </a>
+            <a href="https://github.com/nathangabrielss" target="_blank" title="GitHub">
+                <i class="ph ph-github-logo"></i>
+            </a>
+            <a href="mailto:nathangabrielss@outlook.com" title="Email">
+                <i class="ph ph-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
